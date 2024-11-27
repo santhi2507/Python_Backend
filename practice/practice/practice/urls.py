@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import welcome
 import viewDemo 
+import InheritCardianlity
 
 urlpatterns = [
+    # path("", welcome),
     path("", include("viewDemo.urls")),
+    path("ecom/", include("InheritCardianlity.urls")),
     path('admin/', admin.site.urls),
 ]

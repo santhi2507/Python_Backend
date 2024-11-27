@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'viewDemo',
     'rest_framework',
+    'InheritCardianlity',
+    'practice'
     
 ]
 

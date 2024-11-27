@@ -1,6 +1,6 @@
 from django.views import View
 from django.views.generic.list import ListView
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpRequest
 from .models import User
 import json
 
@@ -26,4 +26,8 @@ def update_user(request, id: int) -> HttpResponse:
     user.email = data['email']
     user.save()
     return HttpResponse(json.dumps(f"{user.name} and {user.email}"))
+
+def home(HttpRequest) -> HttpResponse:
+    
+    return HttpResponse("You are in views demo homepage")
 
